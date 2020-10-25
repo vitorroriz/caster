@@ -4,10 +4,11 @@
         <div>
             <img src="http://127.0.0.1:8000/images/bjj.jpg" width="500" height="500">
         </div>
-        <video width="320" height="240" controls>
-            <source src="../../assets/videos/sv.mp4" type="video/mp4">
+        <video id="video" width="320" height="240" controls>
+            <!-- <source src="../../assets/videos/sv.mp4" type="video/mp4"> -->
             Your browser does not support the video tag.
         </video>
+        <!-- <video id="video"></video> -->
     </div>
 </template>
 
