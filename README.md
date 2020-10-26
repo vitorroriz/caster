@@ -6,6 +6,8 @@ This project was created so I can learn a bit about **HTTP Live Stream (HLS)**, 
 Loading a HLS example stream with a sample asset (https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8).
 Next step is to serve videos from local server and connect client to server.
 
+![early demo, work in progress](https://github.com/vitorroriz/caster/blob/main/early-wip-demo.gif)
+
 
 **Node Express Server**:
 
