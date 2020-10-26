@@ -1,14 +1,22 @@
 # caster
 
-This project was created so I can learn a bit about **HTTP Live Stream (HLS)**, the **JS/TS HLS library Hls.js** (https://github.com/video-dev/hls.js) and video-on-demand as a whole.
+This project was created so I can learn a bit about **HTTP Live Stream (HLS)**, the **JS/TS HLS library Hls.js** (https://github.com/video-dev/hls.js) and video-on-demand as a whole. Note that this is a work in progress.
 
-**Server**:
+**Preview (WIP)**:
+
+Loading a m3u8 sample with HLS. Sample is (https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8).
+Next step is to serve videos from local server and connect client to server.
+
+![early demo, work in progress](https://github.com/vitorroriz/caster/blob/main/early-wip-demo.gif)
+
+
+**Node Express Server**:
 
 This application will allow you to access your personal videos in all devices on in your local network. Example of usage: your personal videos, or the movies and series you have on your Desktop can be accessed in your TV, mobile or any other device that can launch a browser with certain capabilities.
 
 The idea is to have an express server serving videos (.m3u8) from a local directory in your device. The server will also list, when requested, the available files in the served media directory. At a second iteration the server will not only serve .m3u8 videos but convert mp4 videos such that the user don't have to convert it by him/herself.
 
-Stack: Node/Typescript/Express
+Stack: Node.js/Typescript/Express
 
 **Client**:
 
@@ -16,7 +24,22 @@ The client, a Vue app, will display a catalog of the available videos and stream
 
 The template for the Vue application was genearted via vue-cli (https://cli.vuejs.org/).
 
-Stack: Vue/Typescript/Hls.js
+Stack: Vue/Typescript/Hls.js/Node.js
+
+**Instructions**:
+
+To run client with Node.js:
+- `cd client`
+- `npm install`
+- `npm run serve`
+- Access app through a web-browser in your local network at `http://localhost:8080/`.
+
+To run server:
+- `cd casterserver`
+- `npm install`
+- `npm start`
+
+Stack: Vue/Typescript/Hls.js/Node.js
 
 **References:**
 
