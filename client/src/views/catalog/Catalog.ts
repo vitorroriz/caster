@@ -28,24 +28,25 @@ export default class Catalog extends Vue {
             if(!video) {
                 return;
             }
+
             const hls = new Hls();
             hls.loadSource(url);
             hls.attachMedia(video);
             hls.on(Hls.Events.MEDIA_ATTACHED, function () {
-            console.log("video and hls.js are now bound together !");
+            console.log("video and hls.js are now bound together!");
             });
-        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')){
             video.src = url;
             video.addEventListener('loadedmetadata', function() {
-            video.play();
-        });
+                console.log("Meta loaded.");
+            });
         }
     }
 
     public async mounted(): Promise<void> {
-        const hlsSample = 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8';
+        const hlsSample = "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8";
         this.attachVideo(hlsSample, this.mainVideoId);
-
         // console.log(await this.getFileList());
     }
 }
