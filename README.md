@@ -32,6 +32,7 @@ To run client with Node.js:
 - `cd client`
 - `npm install`
 - `npm run serve`
+- Access app through a web-browser in your local network at `http://localhost:8080/`.
 
 To run server:
 - `cd casterserver`
