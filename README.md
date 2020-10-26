@@ -2,6 +2,11 @@
 
 This project was created so I can learn a bit about **HTTP Live Stream (HLS)**, the **JS/TS HLS library Hls.js** (https://github.com/video-dev/hls.js) and video-on-demand as a whole. Note that this is a work in progress.
 
+**Preview (WIP)**:
+Loading a HLS example stream with a sample asset (https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8).
+Next step is to serve videos from local server and connect client to server.
+
+
 **Node Express Server**:
 
 This application will allow you to access your personal videos in all devices on in your local network. Example of usage: your personal videos, or the movies and series you have on your Desktop can be accessed in your TV, mobile or any other device that can launch a browser with certain capabilities.
