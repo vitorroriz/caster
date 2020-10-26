@@ -14,6 +14,8 @@ Stack: Node/Typescript/Express
 
 The client, a Vue app, will display a catalog of the available videos and stream it through HLS/HTML5. It will first request a list of the available items in the catalog and then populate the catalog accordingly.
 
+The template for the Vue application was genearted via vue-cli (https://cli.vuejs.org/).
+
 Stack: Vue/Typescript/Hls.js
 
 **References:**
@@ -25,3 +27,6 @@ Stack: Vue/Typescript/Hls.js
   - https://qvault.io/2020/07/28/hls-video-streaming-with-node-js-a-tutorial/
 - **Express:**
   - https://www.atyantik.com/expressjs-server-with-typescript-part-2-the-novice-programmer/
+- **Vue:**
+  - https://vuejs.org/
+  - https://cli.vuejs.org/
