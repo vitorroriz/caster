@@ -2,7 +2,7 @@ import express = require("express");
 import path from 'path';
 import fs = require('fs');
 const app = express();
-const port = 8000;
+const SERVER_PORT = 8095;
 const PUBLIC_IMAGES = 'public/images';
 const PUBLIC_VIDEOS = 'public/videos';
 type HostedVideo = {fileName: string;}
@@ -17,5 +17,5 @@ app.get('/ls', (req, res) => {
     res.end(JSON.stringify(files));
 });
 
-app.listen(port);
-console.log(`Listening on Port ${port}`);
+app.listen(SERVER_PORT);
+console.log(`Listening on Port ${SERVER_PORT}`);

@@ -1,6 +1,6 @@
 import Hls from 'hls.js';
 import { Component, Vue } from "vue-property-decorator";
-import { SERVER_URL } from "../../util/constants";
+import { SERVER_URL, SERVER_PORT } from "../../util/constants";
 interface FileList {
     fileName: string;
 }
@@ -12,7 +12,7 @@ export default class Catalog extends Vue {
 
     private async getFileList(): Promise<FileList[]> {
         try {
-            const response = await fetch(`${SERVER_URL}/ls`); 
+            const response = await fetch(`${SERVER_URL}:${SERVER_PORT}/ls`); 
             const body = await response.json();
             return body;
         } catch (exception) {
@@ -39,13 +39,13 @@ export default class Catalog extends Vue {
             video.addEventListener('loadedmetadata', function() {
             video.play();
         });
-  }
-
-
+        }
     }
 
     public async mounted(): Promise<void> {
         const hlsSample = 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8';
         this.attachVideo(hlsSample, this.mainVideoId);
+
+        // console.log(await this.getFileList());
     }
 }

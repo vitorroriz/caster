@@ -2,9 +2,7 @@
     <div class="catalog-container">
         <div class="catalog-title">{{title}}</div>
         <div class="video-item">
-            <video :id="mainVideoId" controls>
-                Your browser does not support the video tag.
-            </video>
+            <video :id="mainVideoId" controls></video>
         </div>
     </div>
 </template>

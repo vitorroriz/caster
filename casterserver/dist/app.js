@@ -7,7 +7,7 @@ var express = require("express");
 var path_1 = __importDefault(require("path"));
 var fs = require("fs");
 var app = express();
-var port = 8000;
+var SERVER_PORT = 8095;
 var PUBLIC_IMAGES = 'public/images';
 var PUBLIC_VIDEOS = 'public/videos';
 app.use(express.static(path_1.default.join(__dirname, '..', 'public')));
@@ -19,5 +19,5 @@ app.get('/ls', function (req, res) {
     res.writeHead(200, { 'Access-Control-Allow-Origin': '*' });
     res.end(JSON.stringify(files));
 });
-app.listen(port);
-console.log("Listening on Port " + port);
+app.listen(SERVER_PORT);
+console.log("Listening on Port " + SERVER_PORT);
