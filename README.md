@@ -3,6 +3,7 @@
 This project was created so I can learn a bit about **HTTP Live Stream (HLS)**, the **JS/TS HLS library Hls.js** (https://github.com/video-dev/hls.js) and video-on-demand as a whole. Note that this is a work in progress.
 
 **Preview (WIP)**:
+
 Loading a HLS example stream with a sample asset (https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8).
 Next step is to serve videos from local server and connect client to server.
 
