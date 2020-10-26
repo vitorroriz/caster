@@ -1,13 +1,6 @@
 import Hls from 'hls.js';
 import { Component, Vue } from "vue-property-decorator";
 import { SERVER_URL } from "../../util/constants";
-// import * as hls from "node_modules/hls.js";
-// import * as Hls from "node_modules/hls";
-// import hls = require('hls.js');
-// import * as Hls from "node_modules/hls.js";
-// import Hls from "node_modules/@types/hls.js/index";
-// import h
-// import * from "node_modules/hls.js";
 interface FileList {
     fileName: string;
 }
@@ -35,6 +28,7 @@ export default class Catalog extends Vue {
                 return;
             }
             const hls = new Hls();
+            hls.loadSource(url);
             hls.attachMedia(video);
             hls.on(Hls.Events.MEDIA_ATTACHED, function () {
             console.log("video and hls.js are now bound together !");
