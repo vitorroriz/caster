@@ -9,10 +9,10 @@ Next step is to serve videos from local server and connect client to server.
 
 ![early demo, work in progress](https://github.com/vitorroriz/caster/blob/main/early-wip-demo.gif)
 
-
-**Node Express Server**:
-
 This application will allow you to access your personal videos in all devices on in your local network. Example of usage: your personal videos, or the movies and series you have on your Desktop can be accessed in your TV, mobile or any other device that can launch a browser with certain capabilities.
+
+
+**Node Express Server:**
 
 The idea is to have an express server serving videos (.m3u8) from a local directory in your device. The server will also list, when requested, the available files in the served media directory. At a second iteration the server will not only serve .m3u8 videos but convert mp4 videos such that the user don't have to convert it by him/herself.
 
