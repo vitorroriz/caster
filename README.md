@@ -8,7 +8,7 @@ This project was created so I can learn a bit about **HTTP Live Stream (HLS)**, 
 
 ![early demo, work in progress](https://github.com/vitorroriz/caster/blob/main/early-wip-demo.gif)
 
-- Loading a m3u8 video from a local express static server:
+- Now that our player works, we can setup a local server that will host m3u8 videos and serve it to the HLS client/application:
 
 ![local server demo](https://github.com/vitorroriz/caster/blob/main/local_m3u8_server.gif)
 
