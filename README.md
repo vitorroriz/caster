@@ -4,10 +4,13 @@ This project was created so I can learn a bit about **HTTP Live Stream (HLS)**, 
 
 **Preview (WIP)**:
 
-Loading a m3u8 sample with HLS. Sample is (https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8).
-Next step is to serve videos from local server and connect client to server.
+- Loading a m3u8 sample with HLS. Sample is (https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8).
 
 ![early demo, work in progress](https://github.com/vitorroriz/caster/blob/main/early-wip-demo.gif)
+
+Loading a m3u8 video from a local express static server:
+
+![local server demo](https://github.com/vitorroriz/caster/blob/main/early_demo_local_hls_server.mp4)
 
 This application will allow you to access your personal videos in all devices on in your local network. Example of usage: your personal videos, or the movies and series you have on your Desktop can be accessed in your TV, mobile or any other device that can launch a browser with certain capabilities.
 
