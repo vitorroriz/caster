@@ -1,16 +1,26 @@
 import express = require("express");
 import path from 'path';
 import fs = require('fs');
-const app = express();
-const SERVER_PORT = 8095;
-const PUBLIC_IMAGES = 'public/images';
-const PUBLIC_VIDEOS = 'public/videos';
+import { PUBLIC_DIRECTORY } from "./constants";
+
 type HostedVideo = {fileName: string;}
 
-app.use(express.static(path.join(__dirname,'..', 'public')));
+const app = express();
+const SERVER_PORT = 8095;
+
+ app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With,content-type");
+  next();
+});
+
+const publicDirectory = path.join(PUBLIC_DIRECTORY);
+app.use(express.static(publicDirectory));
+console.log(`serving ${publicDirectory}`)
+
 app.get('/ls', (req, res) => {
     const files: HostedVideo[] = [];
-    fs.readdirSync(PUBLIC_IMAGES).forEach(file => {
+    fs.readdirSync(publicDirectory).forEach(file => {
     files.push({fileName: file});
 });
     res.writeHead(200,  {'Access-Control-Allow-Origin': '*'})
