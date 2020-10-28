@@ -38,6 +38,8 @@ To run client with Node.js:
 - Access app through a web-browser in your local network at `http://localhost:8080/`.
 
 To run server:
+
+- Before running the server, define `PUBLIC_DIRECTORY` as the full path of the directory to be served. The constant is at `casterserver/src/constants.ts`. 
 - `cd casterserver`
 - `npm install`
 - `npm start`
