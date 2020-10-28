@@ -1,16 +1,13 @@
 import Hls from 'hls.js';
 import { Component, Vue } from "vue-property-decorator";
 import { SERVER_URL, SERVER_PORT } from "../../util/constants";
-interface FileList {
-    fileName: string;
-}
 
 @Component
 export default class Catalog extends Vue {
     private title = "Caster Catalog"; 
     private mainVideoId = "main-video";
 
-    private async getFileList(): Promise<FileList[]> {
+    private async requestVideoList(): Promise<string[]> {
         try {
             const response = await fetch(`${SERVER_URL}:${SERVER_PORT}/ls`); 
             const body = await response.json();
@@ -44,10 +41,13 @@ export default class Catalog extends Vue {
         }
     }
 
+    private getVideoUrl(fileName: string) {
+        return `${SERVER_URL}:${SERVER_PORT}/${fileName}` 
+    }
+
     public async mounted(): Promise<void> {
-        const hlsSample = "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8";
-        const localSample = `${SERVER_URL}:${SERVER_PORT}/videos/s04e01/index.m3u8` 
-        this.attachVideo(localSample, this.mainVideoId);
-        // console.log(await this.getFileList());
+        const videos = await this.requestVideoList();
+        this.attachVideo(this.getVideoUrl(videos[0]), this.mainVideoId);
+        console.log(await this.requestVideoList());
     }
 }
