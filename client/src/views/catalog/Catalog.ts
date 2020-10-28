@@ -46,7 +46,8 @@ export default class Catalog extends Vue {
 
     public async mounted(): Promise<void> {
         const hlsSample = "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8";
-        this.attachVideo(hlsSample, this.mainVideoId);
+        const localSample = `${SERVER_URL}:${SERVER_PORT}/videos/s04e01/index.m3u8` 
+        this.attachVideo(localSample, this.mainVideoId);
         // console.log(await this.getFileList());
     }
 }
