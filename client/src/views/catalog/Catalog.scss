@@ -1,19 +1,33 @@
 .catalog-container {
+    background-color: black;
+    height: 100vh;
+    overflow: auto;
+    padding: 2%;
     .catalog-title {
         font-size: 4rem;
-        color: black;
+        color: khaki;
         font-weight: bold;
         width: fit-content;
         margin: 0 auto 4rem auto;
+        font-family: sans-serif;
     };
 
-    .video-item {
-        width: 50%;
+    .catalog {
+        width: 80%;
         margin: 0 auto;
+        .catalog-wrapper {
+            display: grid;
+            grid-gap: 2%;
+            grid-template-columns: repeat(auto-fill, minmax(50vh, 1fr) ) ;
+            background-color: black;
+            color: black;
 
-        video {
-            width: 100%;
-            height: 100%;
+            .catalog-item {
+                padding: 4px;
+                background-color: khaki;
+                width: 100%;
+                overflow: auto;
+            }
         }
     }
 }
