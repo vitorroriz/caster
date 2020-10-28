@@ -4,15 +4,18 @@ This project was created so I can learn a bit about **HTTP Live Stream (HLS)**, 
 
 **Preview (WIP)**:
 
-Loading a m3u8 sample with HLS. Sample is (https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8).
-Next step is to serve videos from local server and connect client to server.
+- Loading a m3u8 sample with HLS. Sample is (https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8).
 
 ![early demo, work in progress](https://github.com/vitorroriz/caster/blob/main/early-wip-demo.gif)
 
+- Now that our player works, we can setup a local server that will host m3u8 videos and serve it to the HLS client/application. Observe the chunks of the video (.ts) being loaded while we move the video forward:
 
-**Node Express Server**:
+![local server demo](https://github.com/vitorroriz/caster/blob/main/local_m3u8_server.gif)
 
 This application will allow you to access your personal videos in all devices on in your local network. Example of usage: your personal videos, or the movies and series you have on your Desktop can be accessed in your TV, mobile or any other device that can launch a browser with certain capabilities.
+
+
+**Node Express Server:**
 
 The idea is to have an express server serving videos (.m3u8) from a local directory in your device. The server will also list, when requested, the available files in the served media directory. At a second iteration the server will not only serve .m3u8 videos but convert mp4 videos such that the user don't have to convert it by him/herself.
 
