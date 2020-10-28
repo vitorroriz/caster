@@ -19,9 +19,11 @@ app.use(express.static(publicDirectory));
 console.log(`serving ${publicDirectory}`)
 
 app.get('/ls', (req, res) => {
-    const files: HostedVideo[] = [];
+    let files: string[] = [];
     fs.readdirSync(publicDirectory).forEach(file => {
-    files.push({fileName: file});
+        if(path.extname(file).toLowerCase() === '.m3u8') {
+            files.push(file);
+        }
 });
     res.writeHead(200,  {'Access-Control-Allow-Origin': '*'})
     res.end(JSON.stringify(files));
