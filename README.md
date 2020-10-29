@@ -12,6 +12,8 @@ I'll update the page according to the project's progress.
 
 ![early demo, work in progress](https://media.giphy.com/media/BsKFJdQfoHjrTWg48o/giphy.gif)
 
+![current style](https://github.com/vitorroriz/caster/blob/main/catalog_preview.png)
+
 **Steps (WIP)**:
 
 - Loading a m3u8 sample with HLS. Sample is (https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8).
