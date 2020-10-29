@@ -1,4 +1,3 @@
-import Hls from 'hls.js';
 import { Component, Vue } from "vue-property-decorator";
 import { SERVER_URL, SERVER_PORT } from "../../util/constants";
 import CatalogItem from "../../components/CatalogItem.vue";
@@ -11,7 +10,6 @@ type videoItem = {videoId: string; videoUrl: string};
 })
 export default class Catalog extends Vue {
     private title = "Caster Catalog"; 
-    private mainVideoId = "main-video";
     private videoList: videoItem[] = [];
 
     private async requestVideoList(): Promise<string[]> {

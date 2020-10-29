@@ -1,3 +1,5 @@
+$purple_neon : rgb(180, 52, 235);
+
 .catalog-container {
     background-color: black;
     height: 100vh;
@@ -5,11 +7,11 @@
     padding: 2%;
     .catalog-title {
         font-size: 4rem;
-        color: khaki;
+        color: $purple_neon;
         font-weight: bold;
         width: fit-content;
         margin: 0 auto 4rem auto;
-        font-family: sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
     };
 
     .catalog {
@@ -18,13 +20,14 @@
         .catalog-wrapper {
             display: grid;
             grid-gap: 2%;
-            grid-template-columns: repeat(auto-fill, minmax(50vh, 1fr) ) ;
+            grid-template-columns: repeat(auto-fill, minmax(40vh, 1fr) ) ;
             background-color: black;
             color: black;
 
             .catalog-item {
-                padding: 4px;
-                background-color: khaki;
+                border-style: solid;
+                border-color: $purple_neon;
+                border-width: 4px;
                 width: 100%;
                 overflow: auto;
             }
