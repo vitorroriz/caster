@@ -1,8 +1,18 @@
 # caster
 
-This project was created so I can learn a bit about **HTTP Live Stream (HLS)**, the **JS/TS HLS library Hls.js** (https://github.com/video-dev/hls.js) and video-on-demand as a whole. Note that this is a work in progress.
+This project was created so I can learn a bit about **HTTP Live Stream (HLS)**, the **JS/TS HLS library Hls.js** (https://github.com/video-dev/hls.js) and video-on-demand as a whole. Note that this is a **work in progress (WIP)**.
 
 **Preview (WIP)**:
+
+This application will allow you to access your personal videos in all devices on in your local network. Example of usage: your personal videos, or the movies and series you have on your Desktop can be accessed in your TV, mobile or any other device that can launch a browser with certain capabilities.
+
+I'll update the page according to the project's progress.
+
+- Current Status
+
+![early demo, work in progress](https://media.giphy.com/media/BsKFJdQfoHjrTWg48o/giphy.gif)
+
+**Steps (WIP)**:
 
 - Loading a m3u8 sample with HLS. Sample is (https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8).
 
@@ -12,8 +22,9 @@ This project was created so I can learn a bit about **HTTP Live Stream (HLS)**, 
 
 ![local server demo](https://github.com/vitorroriz/caster/blob/main/local_m3u8_server.gif)
 
-This application will allow you to access your personal videos in all devices on in your local network. Example of usage: your personal videos, or the movies and series you have on your Desktop can be accessed in your TV, mobile or any other device that can launch a browser with certain capabilities.
+- The client requests the list of available m3u8 videos and populate the catalog. The picture shows the catalog after all videos were loaded and played. Observe the loaded chunks (.ts files) on the network tab:
 
+![early demo catalog picture](https://github.com/vitorroriz/caster/blob/main/early-demo-catalog.png)
 
 **Node Express Server:**
 
