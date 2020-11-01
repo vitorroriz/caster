@@ -3,7 +3,7 @@
         <div class="catalog-title">{{title}}</div>
         <div class="catalog">
             <div class="catalog-wrapper">
-                <CatalogItem class="catalog-item" v-for="item in videoList" :key="item.videoId" :videoId="item.videoId" :videoUrl="item.videoUrl">  
+                <CatalogItem v-for="item in videoList" :key="item.videoId" :videoId="item.videoId" :videoUrl="item.videoUrl">  
                 </CatalogItem>
             </div>
         </div>

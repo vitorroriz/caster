@@ -9,7 +9,7 @@ type videoItem = {videoId: string; videoUrl: string};
     }
 })
 export default class Catalog extends Vue {
-    private title = "Caster Catalog"; 
+    private title = "Caster"; 
     private videoList: videoItem[] = [];
 
     private async requestVideoList(): Promise<string[]> {

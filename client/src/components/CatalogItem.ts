@@ -32,6 +32,10 @@ export default class CatalogItem extends Vue {
         }
     }
 
+    public get fileName(): string {
+        return this.videoId.split(".")[0];
+    }
+
     public async mounted(): Promise<void> {
         await this.attachVideo(this.videoUrl, this.videoId);
     }

@@ -1,17 +1,18 @@
 $purple_neon : rgb(180, 52, 235);
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
 
 .catalog-container {
     background-color: black;
     height: 100vh;
     overflow: auto;
-    padding: 2%;
+    padding: 0 2% 2% 0;
     .catalog-title {
         font-size: 4rem;
         color: $purple_neon;
         font-weight: bold;
         width: fit-content;
-        margin: 0 auto 4rem auto;
-        font-family: Arial, Helvetica, sans-serif;
+        margin: 0 auto 1rem auto;
+        font-family: 'Source Code Pro', monospace, Arial, Helvetica, sans-serif;
     };
 
     .catalog {
@@ -21,16 +22,6 @@ $purple_neon : rgb(180, 52, 235);
             display: grid;
             grid-gap: 2%;
             grid-template-columns: repeat(auto-fill, minmax(40vh, 1fr) ) ;
-            background-color: black;
-            color: black;
-
-            .catalog-item {
-                border-style: solid;
-                border-color: $purple_neon;
-                border-width: 4px;
-                width: 100%;
-                overflow: auto;
-            }
         }
     }
 }

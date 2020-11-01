@@ -1,0 +1,24 @@
+
+$purple_neon : rgb(180, 52, 235);
+.catalog-item {
+    .catalog-video{
+        border-style: solid;
+        border-color: $purple_neon;
+        border-width: 0.2rem;
+        width: 100%;
+        overflow: hidden;
+
+    }
+    .catalog-video:hover {
+        border-style: dotted;
+    }
+    .catalog-video:fullscreen {
+        border-width: 0;
+    }
+
+    .video-label {
+        color: whitesmoke;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
