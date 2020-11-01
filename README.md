@@ -12,7 +12,7 @@ I'll update the page according to the project's progress.
 
 ![early demo, work in progress](https://media.giphy.com/media/BsKFJdQfoHjrTWg48o/giphy.gif)
 
-![current style](https://github.com/vitorroriz/caster/blob/main/catalog_preview.png)
+![current style](https://github.com/vitorroriz/caster/blob/main/catalog_preview_2.png)
 
 **Steps (WIP)**:
 
